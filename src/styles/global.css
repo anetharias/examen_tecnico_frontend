@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  @apply shadow-md py-3 px-6 rounded-md transition duration-300;
+}
+
+.btn-purple {
+  @apply bg-bookmark-purple text-white;
+}
+
+.btn-white {
+  @apply bg-bookmark-white;
+}
+.slider-arrow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.arrow-btn {
+  top: 45%;
+  z-index: 1;
+}
+.next {
+  float: right;
+  margin-right: 1% !important;
+}
+.prev{
+  float: left;
+  margin-left: 1% !important;
+}
+
+.iconAnimation{
+  animation: float 5s ease-in-out infinite;
+}
+
+.instagram{
+  animation-delay: 1s;
+}
+.linkedin{
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.animation:hover #cardImage{
+	transition: all 0.65s;
+	transform: rotateY(360deg);
+}
+
+.fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+.divider
+{
+	position: relative;
+	margin-top: 0px;
+	height: 1px;
+}
+.div-arrow-down:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -7px;
+	left: calc(50% - 7px);
+	width: 14px;
+	height: 14px;
+	transform: rotate(45deg);
+	background-color: white;
+	border-bottom: 1px solid rgb(48,49,51);
+	border-right: 1px solid rgb(48,49,51);
+}
+.div-arrow-down2:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -7px;
+	left: calc(50% - 7px);
+	width: 14px;
+	height: 14px;
+	transform: rotate(45deg);
+	background-color: #f7f7f7;
+	border-bottom: 1px solid rgb(48,49,51);
+	border-right: 1px solid rgb(48,49,51);
+}
+
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.div-dot:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -9px;
+	left: calc(50% - 9px);
+	width: 18px;
+	height: 18px;
+	background-color: #99E2B4;
+	border: 1px solid #036666;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 2px white,
+					0 0 0 4px white;
+}
+
+.div-dot2:after
+{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -9px;
+	left: calc(50% - 9px);
+	width: 18px;
+	height: 18px;
+	background-color: #99E2B4;
+	border: 1px solid #036666;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 2px #f7f7f7,
+					0 0 0 4px #f7f7f7;
+}
+
+.avatarT{
+height:150px;
+width:150px;
+}
+
+@media (max-width: 600px) {
+  .avatarT{
+    height:80px;
+    width:80px;
+  }
+}
+
+.imageKimenda{
+  height:400px;
+  width:400px;
+  }
+  
+  @media (max-width: 600px) {
+    .imageKimenda{
+      height:200px;
+      width:200px;
+    }
+  }
+
+.zoom {
+    transition: transform .2s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.5); 
+}
