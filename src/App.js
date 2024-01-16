@@ -10,42 +10,6 @@ import MultipleSlider from "./components/multipleSlider";
 
 
 const App = () => {
-  const [footer, setFooter] = useState([]);
-  const [menu, setMenu] = useState([]);
-  const [products, setProducts] = useState([]);
-  const [lienzo, setLienzo] = useState([]);
-  const [slider, setSlider] = useState([]);
-
-  const getDataApi = async () => {
-    try {
-      const responseFooter = await API.utils.footer();
-      console.log("[LOG] [ RESPONSE FOOTER ]", responseFooter.data);
-      setFooter(responseFooter.data);
-
-      const responseMenu = await API.utils.menu();
-      console.log("[LOG] [ RESPONSE MENU ]", responseMenu.data);
-      setMenu(responseMenu.data);
-
-      const responseSliders = await API.utils.sliders();
-      console.log("[LOG] [ RESPONSE SLIDERS ]", responseSliders.data);
-      setSlider(responseSliders.data);
-
-      const responseLienzo = await API.utils.lienzo();
-      console.log("[LOG] [ RESPONSE LIENZO ]", responseLienzo.data);
-      setLienzo(responseLienzo.data);
-
-      const responseProducts = await API.utils.products();
-      console.log("[LOG] [ RESPONSE PRODUCTS ]", responseProducts.data);
-      setProducts(responseProducts.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  useEffect(() => {
-    getDataApi();
-  }, []);
-
   return (
     <div class="home-minimal">
       <div id="main">
